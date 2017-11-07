@@ -1,0 +1,8 @@
+{
+  "name": "node-web-app",
+  "version": "1.0.0",
+  "description": "node web app",
+  "main": "index.js",
+  "author": "Bowen Zhong <bz4e14@soton.ac.uk>",
+  "license": "MIT"
+}
