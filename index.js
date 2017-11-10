@@ -9,4 +9,4 @@ app().start()
   .catch(() => {
     console.log('Error happened when app boot');
     process.exit(-1);
-  })
+  });

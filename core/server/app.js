@@ -8,6 +8,7 @@ module.exports = () => {
 
   parentApp.enable('trust proxy');
 
+  parentApp.use(require('./site')());
 
   debug('ParentApp setup end');
 
