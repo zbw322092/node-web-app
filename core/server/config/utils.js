@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports.getContentPath = (type) => {
+module.exports.getContentPath = function (type) {
   switch (type) {
     case 'images':
       return path.join(this.get('paths:contentPath'), 'images/');

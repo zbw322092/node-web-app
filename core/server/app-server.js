@@ -1,5 +1,6 @@
 const debug = require('ghost-ignition').debug('server');
 const Promise = require('bluebird');
+const config = require('./config');
 
 class AppServer {
 
@@ -11,9 +12,11 @@ class AppServer {
   start () {
     debug('Starting...');
 
+    let port = config.get('server:port');
+    let host = config.get('server:host');
     return new Promise((resolve, reject) => {
-      this.httpServer = this.rootApp.listen(9999, () => {
-        console.log('Server is listening on port 9999');
+      this.httpServer = this.rootApp.listen(port, host, () => {
+        console.log(`Server is running: ${host}:${port}`);
       });
 
       this.httpServer.on('listening', () => {
