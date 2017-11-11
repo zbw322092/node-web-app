@@ -8,6 +8,7 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "express": "^4.16.2",
-    "ghost-ignition": "^2.8.16"
+    "ghost-ignition": "^2.8.16",
+    "nconf": "^0.9.1"
   }
 }
