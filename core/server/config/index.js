@@ -13,6 +13,8 @@ _private.loadNconf = (options) => {
   
   options = options || {};
 
+  nconf.file('overrides', path.join(baseConfigPath, 'overrides.json'));
+
   /** 
    * common line arguments
    */
