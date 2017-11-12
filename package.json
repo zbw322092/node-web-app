@@ -12,6 +12,7 @@
     "ghost-ignition": "^2.8.16",
     "knex": "^0.14.0",
     "knex-migrator": "^3.0.6",
+    "lodash": "^4.17.4",
     "nconf": "^0.9.1",
     "uuid": "^3.1.0"
   }
