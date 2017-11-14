@@ -1,0 +1,4 @@
+[submodule "core/client"]
+	path = core/client
+	url = https://github.com/zbw322092/node-web-app-client.git
+	branch = master
