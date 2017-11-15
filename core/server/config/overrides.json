@@ -1,5 +1,6 @@
 {
   "paths": {
-    "migrationPath": "core/server/data/migrations"
+    "migrationPath": "core/server/data/migrations",
+    "defaultViews": "core/server/views"
   }
 }

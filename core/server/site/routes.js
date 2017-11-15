@@ -6,5 +6,9 @@ module.exports = function siteRouter () {
 
   router.get('/site', controllers.siteCtrl);
 
+  router.get('/template', (req, res) => {
+    res.render('normal/index');
+  });
+
   return router;
 };
