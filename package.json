@@ -16,6 +16,7 @@
     "knex-migrator": "^3.0.6",
     "lodash": "^4.17.4",
     "nconf": "^0.9.1",
+    "serve-favicon": "^2.4.5",
     "uuid": "^3.1.0"
   }
 }

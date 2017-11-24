@@ -4,6 +4,7 @@ const express = require('express');
 const exphbs  = require('express-handlebars');
 const helpers = require('handlebars-helpers')();
 const compression = require('compression');
+const favicon = require('serve-favicon');
 const config = require('./config');
 const logRequest = require('./middleware/log-request.js');
 
@@ -11,7 +12,9 @@ module.exports = () => {
   debug('ParentApp setup start');
   
   const parentApp = express();
-
+  
+  parentApp.use(favicon(path.join(process.cwd(), config.get('paths:assets'), 'favicon.png')));
+  
   parentApp.set('views', path.join(process.cwd(), config.get('paths:defaultViews')));
 
   const hbs = exphbs.create({

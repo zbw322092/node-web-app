@@ -1,7 +1,7 @@
 {
   "url": "http://localhost:9999",
   "server": {
-    "host": "127.0.0.1",
+    "host": "me.dev.com",
     "port": 9999
   },
   "logging": {
