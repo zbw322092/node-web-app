@@ -29,18 +29,20 @@ module.exports = () => {
   parentApp.set('view engine', '.hbs');
 
   parentApp.enable('trust proxy');
-
+  
   parentApp.use(logRequest);
 
   if (config.get('compress') !== false) {
     parentApp.use(compression());
   }
 
+  parentApp.use(express.static(__dirname + '/static'));
+
   parentApp.get('/template', (req, res) => {
     res.render('normals/index');
   });
 
-  parentApp.use(require('./site')());
+  // parentApp.use(require('./site')());
 
   debug('ParentApp setup end');
 
