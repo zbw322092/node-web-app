@@ -1,8 +1,8 @@
 {
-  "url": "http://localhost:9999",
+  "url": "http://www.shancetech.com/",
   "server": {
-    "host": "me.dev.com",
-    "port": 9999
+    "host": "0.0.0.0",
+    "port": 80
   },
   "logging": {
     "level": "info",
