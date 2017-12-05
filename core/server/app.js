@@ -37,10 +37,13 @@ module.exports = () => {
   }
 
   parentApp.use(express.static(__dirname + '/static'));
-
-  parentApp.get('/template', (req, res) => {
-    res.render('normals/index');
+  parentApp.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './static/index.html'));
   });
+
+  // parentApp.get('/template', (req, res) => {
+  //   res.render('normals/index');
+  // });
 
   // parentApp.use(require('./site')());
 
