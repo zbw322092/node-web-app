@@ -37,6 +37,16 @@ module.exports = () => {
   }
 
   parentApp.use(express.static(__dirname + '/static'));
+
+  parentApp.get('/download/*', (req, res) => {
+    let reqPath = __dirname + req.path;
+    res.download(reqPath, (err) => {
+      if (err) {
+        res.send(`<p>Sorry, no file found.</p>`);
+      }
+    });
+  });
+
   parentApp.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './static/index.html'));
   });
